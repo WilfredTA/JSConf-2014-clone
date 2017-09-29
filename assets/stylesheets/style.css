@@ -1,0 +1,245 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html {
+	font-family: "Open sans", Arial, sans-serif;
+}
+
+/* Body Grid */
+body {
+	width: 100vw;
+	height: 100vh;
+	grid-template-rows: auto auto auto auto auto auto auto auto;
+	grid-template-columns: 1fr 1fr 1fr;
+	background-color: #ffffff;
+}
+
+/* Header Navigation */
+
+.nav {
+	grid-row: 1 / 2;
+	box-sizing: border-box;
+	width: 100%;
+	position: fixed;
+	border-top: 10px solid #F5F5F5;
+	z-index: 1;
+	background-color: #fff;
+	border-bottom: 1px solid #F5F5F5;
+}
+
+.nav ul {
+	margin: 0 auto;
+	font-size: 13px;
+	color: #444;
+	text-align: center;
+	text-transform: uppercase;
+	max-width: 960px;
+}
+
+.nav ul li{
+	display: inline-block;
+	margin: 0 27px;
+}
+
+.nav a {
+	line-height: 44px;
+}
+
+.nav a:hover {
+	text-decoration: underline;
+}
+
+
+/* Banner */
+
+.banner {
+	position: relative;
+	top: 55px;
+	height: 428px;
+	grid-row: 2 / 3;
+	background: url("../images/front.jpg") center no-repeat;
+	text-align: center;
+	margin-bottom: 100px;
+	color: #fff;
+}
+
+.banner h1 {
+	font-size: 72px;
+	text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+	position: relative;
+	top: 150px;
+	font-weight: normal;
+}
+
+.banner h2 {
+	position: relative;
+	top: 150px;
+	font-size: 31px;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+.banner img {
+	position: relative;
+	top: 150px;
+	width: 80px;
+	height: 80px;
+	box-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+}
+
+/* Tickets Row -- Speakers Row */
+
+.tickets, .speakers {
+	
+	text-align: center;
+	color: #444;
+	padding-bottom: 55px;
+	border-bottom: 2px solid #F5F5F5;
+}
+.tickets p {
+	display: block;
+	margin: 1rem;
+	font-weight: lighter;
+	font-size: 13px;
+}
+
+.tickets h1, .speakers h1 {
+	font-size: 48px;
+	font-weight: 100;
+	display: block;
+	margin-bottom: 29px;
+	text-align: center;
+}
+
+.button {
+	padding: 10px 30px;
+	background-color: #008000;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 100;
+}
+
+/* Speakers Grid */
+
+.speakers-container {
+	grid-column: 2 / 3;
+	display: grid;
+	margin: 0 30px;
+
+}
+.speakers {
+	margin: 0 auto;
+	max-width: 1080px;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto  1fr 1fr 1fr 1fr;
+}
+
+
+.speakers h2 {
+	grid-column: 1 / -1;
+	width: 100%;
+}
+.speakers-header {
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	margin-top: 68px;
+}
+
+.speaker {
+	margin: 5px;
+	vertical-align: top;
+	display: inline-block;
+	position: relative;
+	width: 280px;
+	height: 378px;
+	border: 1px solid #e8e8e8;
+}
+
+
+.speaker h2 {
+	color: #008000;
+	font-weight: bolder;
+	font-size: 24px;
+	text-align: center;
+	margin: 30px 0 4px;
+}
+
+.speaker p {
+	font-weight: lighter;
+	font-size: 13px;
+	line-height: 1.2rem;
+	padding: 5px;
+}
+
+.speaker-hover-text {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+    padding: 10px;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.speaker-hover-text:hover {
+	opacity: 0.9;
+}
+
+.speaker-hover-text p {
+	line-height: 15px;
+	font-size: 13px;
+	color: #fff;
+	font-weight: lighter;
+}
+
+.speaker-hover-text h1 {
+	color: #008000;
+	font-size: 24px;
+	line-height: auto;
+	margin-bottom: 5px;
+	font-weight: 500;
+}
+
+
+@media all and (max-width: 649px) {
+	.speakers-container {
+		grid-column: 1 / -1;
+		margin: 0;
+	}
+
+	.nav {
+		display: none;
+		z-index: -1;
+	}
+
+	.banner {
+		grid-row: 1 / 2;
+		position: relative;
+		height: 300px;
+		top: 0;
+		z-index: 1;
+		margin-bottom: 60px;
+	}
+
+	.banner h1 {
+		top: 95px;
+		font-size: 40px;
+	}
+
+	.banner h2 {
+		top: 95px;
+		font-size: 20px;
+	}
+
+	.banner img {
+		top: 95px;
+	}
+
+	.speaker{
+		margin: 4px;
+	}
+}
